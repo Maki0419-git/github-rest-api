@@ -1,0 +1,197 @@
+/* 排版 */
+.container{
+    width: 75%;
+}
+
+.vertical-center{
+    display:flex;
+    align-items:center;
+}
+
+.herizontal-vertical-center{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* grid */
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 100px;
+ }
+
+.wrapper-header{
+    row-gap: 30px;
+    grid-auto-rows: 110px;
+    margin-bottom: 20px;
+}
+
+.wrapper-card{
+    row-gap: 30px;
+    grid-auto-rows: 110px;
+}
+
+/* search bar */
+
+
+.search-bar input[type=text]{
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid white;
+    float: left;
+    width: 85%;
+    border-top-left-radius:40px;
+    border-bottom-left-radius:40px
+}
+
+.search-bar button {
+    float: left;
+    width: 10%;
+    padding: 7px;
+    background: white;
+    color: rgba(60, 60, 67, 0.6);
+    font-size: 17px;
+    border: 1px solid white;
+    border-left: none; /* Prevent double borders */
+    border-top-right-radius:40px;
+    border-bottom-right-radius:40px;
+    cursor: pointer;
+  }
+
+input:focus{
+    outline: none;
+}
+
+/* Header */
+
+
+.header h1{
+    font-family:"Ubuntu Mono"
+}
+
+img {
+    border-radius:150px;
+    margin-right: 40px;
+    width:60px;
+    height:60px;
+}
+
+.github{
+    margin-right: 40px;
+    width:60px;
+    height:60px;
+}
+
+/* card */
+
+.card{
+    position: relative;
+    background-color:white;
+    display:flex;
+    justify-content: center;
+    flex-direction:column;
+    padding:55px 20px;
+}
+
+.card:hover{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    cursor: pointer;
+    transition:0.7s
+}
+
+.card>div{
+    display:flex;
+    flex:1;
+    align-items: 'flex-start';
+    justify-content:center;
+}
+
+.title{
+    display:flex;
+    flex:2;
+    align-items: 'center';
+    justify-content:center;
+}
+
+.info{
+    display:flex;
+    flex:8;
+    justify-content:flex-start;
+    align-items:center;
+}
+
+.card span {
+    color:#7E7E7E;
+}
+
+.language{
+    margin-right: 15px;
+}
+
+.card div h2{
+    font-size:25px;
+    margin:0px;
+    position: relative;
+    bottom:5px;
+    font-weight: normal;
+    
+}
+
+
+/* dot */
+
+.top-left{
+    position:absolute;
+    top:15px;
+    left:10px;
+    color:#7E7E7E
+}
+
+
+/* arrow */
+
+.center-right{
+    position:absolute;
+    top:38%;
+    right:2%;
+    font-size: 30px;
+    color:#646363
+}
+
+/* read more button */
+.loading{
+    height:5%;
+}
+
+/* RWD */
+@media screen and (max-width:1000px) { 
+    .container{
+        width: 90%;
+    }
+    .search-bar input[type=text]{
+        width: 85%;
+    }
+    img{
+        margin-left: 0px;
+    }
+    .wrapper {
+        grid-template-columns: none;
+        grid-row-gap: 20px;
+     }
+     .card div h{
+         font-size:20px;
+     }
+     .language{
+        font-size:16px;
+     }
+     .center-right{
+         font-size:25px
+     }
+     .wrapper-header{
+         row-gap: 0px;
+         grid-auto-rows: 75px;
+         margin-bottom: 10px;
+     }
+  }

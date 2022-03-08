@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import RepoList from './RepoList';
+import RepoList from './page/RepoList'
 import './App.css';
 import './index.css';
 
