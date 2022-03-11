@@ -7,7 +7,7 @@ import { AiFillStar } from 'react-icons/ai'
 import { BsThreeDotsVertical } from 'react-icons/bs'
 import { MdArrowForwardIos } from 'react-icons/md'
 //css
-import './style.css';
+import './List.css';
 //package
 import moment from 'moment';
 

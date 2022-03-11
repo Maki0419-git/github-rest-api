@@ -1,12 +1,15 @@
-import logo from './logo.svg';
+//packages
+import { Routes, Route, Link } from "react-router-dom";
+//components
 import RepoList from './page/RepoList'
-import './index.css';
+
 
 function App() {
   return (
-    <div>
-      <RepoList />
-    </div>
+    <Routes>
+      {/* <Route path="/" element={<Home />} /> */}
+      <Route path="/users/:username/repos" element={<RepoList />} />
+    </Routes>
   );
 }
 

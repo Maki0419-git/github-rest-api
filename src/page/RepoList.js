@@ -2,7 +2,7 @@
 import { useEffect, useState, useRef, useCallback } from 'react';
 
 //css
-import './RepoList.css'
+import './style.css'
 //components
 import Header from '../component/Common/Header';
 import { CommonBar } from '../component/Common/Bar';
