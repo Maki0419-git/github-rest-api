@@ -1,0 +1,27 @@
+.bar{
+    background-color: #B3CEE5;
+    padding: 10px 20px;
+    height:7vh;
+    display:flex;
+    align-items: center;
+  
+}
+
+img{
+    width: 8%;
+    margin-right:1%;
+    margin-bottom: 3px;
+}
+
+.bar h2{
+    color: #396184;
+}
+
+.arrow-icon{
+    color: #396184;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 4px;
+    margin-right:1%;
+
+}

@@ -1,37 +1,6 @@
 /* 排版 */
-.container{
-    width: 75%;
-}
 
-.vertical-center{
-    display:flex;
-    align-items:center;
-}
 
-.herizontal-vertical-center{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-/* grid */
-
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 100px;
- }
-
-.wrapper-header{
-    row-gap: 30px;
-    grid-auto-rows: 110px;
-    margin-bottom: 20px;
-}
-
-.wrapper-card{
-    row-gap: 30px;
-    grid-auto-rows: 110px;
-}
 
 /* search bar */
 
@@ -67,32 +36,16 @@ input:focus{
 /* Header */
 
 
-.header h1{
-    font-family:"Ubuntu Mono"
-}
-
-img {
-    border-radius:150px;
-    margin-right: 40px;
-    width:60px;
-    height:60px;
-}
-
-.github{
-    margin-right: 40px;
-    width:60px;
-    height:60px;
-}
-
 /* card */
 
 .card{
     position: relative;
     background-color:white;
-    display:flex;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex-direction:column;
-    padding:55px 20px;
+    padding: 5% 9%;
+  
 }
 
 .card:hover{
@@ -101,43 +54,59 @@ img {
     transition:0.7s
 }
 
-.card>div{
-    display:flex;
-    flex:1;
-    align-items: 'flex-start';
-    justify-content:center;
-}
 
-.title{
+.first{
     display:flex;
-    flex:2;
-    align-items: 'center';
-    justify-content:center;
-}
-
-.info{
-    display:flex;
-    flex:8;
-    justify-content:flex-start;
     align-items:center;
+    justify-content:flex-start;
+    flex:1;
+    margin-bottom: 2%;
+}
+
+.first .star-icon,.second > span{
+   flex:1
+}
+
+.first >h2 ,.second .detail{
+    flex:6
+ }
+
+ .star-icon{
+    display:flex;
+    justify-content:flex-start;
+ }
+
+.second{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    flex:1
+}
+
+.second> span{
+    display:flex; justify-content: center;
+}
+
+
+.card div h2{
+    font-size:25px;
+    margin:0px;
+    font-weight: normal;
+    
+} 
+.detail{
+    display: inline-block;
 }
 
 .card span {
     color:#7E7E7E;
 }
 
+
 .language{
     margin-right: 15px;
 }
 
-.card div h2{
-    font-size:25px;
-    margin:0px;
-    position: relative;
-    bottom:5px;
-    font-weight: normal;
-    
-}
 
 
 /* dot */
@@ -167,31 +136,18 @@ img {
 
 /* RWD */
 @media screen and (max-width:1000px) { 
-    .container{
-        width: 90%;
-    }
+
     .search-bar input[type=text]{
         width: 85%;
     }
-    img{
-        margin-left: 0px;
+
+    .card div h2{
+        font-size:20px;
     }
-    .wrapper {
-        grid-template-columns: none;
-        grid-row-gap: 20px;
-     }
-     .card div h{
-         font-size:20px;
-     }
-     .language{
-        font-size:16px;
-     }
+    .card span {
+        font-size:15px;
+    }
      .center-right{
          font-size:25px
-     }
-     .wrapper-header{
-         row-gap: 0px;
-         grid-auto-rows: 75px;
-         margin-bottom: 10px;
      }
   }
