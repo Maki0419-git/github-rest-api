@@ -29,9 +29,8 @@ export default function RepoList() {
                         <Header />
                         <SortBar query={query} setQuery={setQuery} />
                     </div>
-                    <div className="wrapper wrapper-card" >
-                        <List query={query} setQuery={setQuery} />
-                    </div>
+
+                    <List query={query} setQuery={setQuery} />
                 </div>
             </div>
         </>

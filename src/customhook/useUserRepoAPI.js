@@ -17,13 +17,7 @@ export default function useUserRepoAPI({ query }) {
     }
     const timer = (repositories, data) => setTimeout(() => {
         setStatus(prev => ({ ...prev, loading: false, hasMore: data.length > 0 }))
-        if (query.page === 1) {
-            setRepositories(repositories)
-        } else {
-
-            setRepositories(prev => [...prev, ...repositories]);
-        }
-
+        setRepositories(prev => [...prev, ...repositories]);
     }, 1000)
     const getRepo = useCallback(async () => {
         console.log("callback")
@@ -61,6 +55,7 @@ export default function useUserRepoAPI({ query }) {
         readDataCount.current += 1
         console.log("page: " + query.page);
         // console.log(readDataCount.current)
+        if (query.page === 1) setRepositories([]);
         getRepo();
         return () => clearTimeout(timer)
     }, [query])

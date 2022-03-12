@@ -6,7 +6,7 @@ import moment from 'moment';
 import useUserRepoAPI from '../../../customhook/useUserRepoAPI';
 
 //component
-
+import NoData from "../../../assets/img/no-data.png"
 
 //react icons
 import { AiFillStar } from 'react-icons/ai'
@@ -42,33 +42,45 @@ export default function List({ query, setQuery }) {
     useEffect(() => { render.current += 1; })
     return (
         <>
-            {repositories.map((repo, index) => {
-                return (
-                    <div className="card" key={index} ref={index + 1 === repositories.length ? refCallback : null}>
-                        <div className="first">
-                            <AiFillStar color="#FFE177" className="star-icon" size={30} />
-                            <h2>{repo.name}</h2>
-                        </div>
-                        <div className="second">
-                            <span>{repo.stargazers_count}</span>
-                            <div className="detail">
-                                {repo.language && <span className="language">{repo.language}</span>}
-                                <span className="time">Upadte At : {moment(repo.updated_at).startOf("seconds").fromNow()}</span>
+            {/* card */}
+            <div className="wrapper wrapper-card" >
+                {repositories.map((repo, index) => {
+                    return (
+                        <div className="card" key={index} ref={index + 1 === repositories.length ? refCallback : null}>
+                            <div className="first">
+                                {/* star icon */}
+                                <AiFillStar color="#FFE177" className="star-icon" size={30} />
+                                {/* repo name */}
+                                <h2>{repo.name}</h2>
+                            </div>
+                            <div className="second">
+                                {/* star count */}
+                                <span>{repo.stargazers_count}</span>
+                                {/* language and update time */}
+                                <div className="detail">
+                                    {repo.language && <span className="language">{repo.language}</span>}
+                                    <span className="time">Upadte At : {moment(repo.updated_at).startOf("seconds").fromNow()}</span>
+                                </div>
+                            </div>
+                            {/* dot */}
+                            <div className="dot">
+                                <BsThreeDotsVertical />
+                            </div>
+                            {/* arrow */}
+                            <div className="arrow">
+                                <MdArrowForwardIos />
                             </div>
                         </div>
-                        <div className="dot">
-                            <BsThreeDotsVertical />
-                        </div>
-                        <div className="arrow">
-                            <MdArrowForwardIos />
-                        </div>
-                    </div>
-                )
+                    )
 
-            })}
-            {loading && new Array(6).fill(0).map((item, index) => <Skeleton key={index} />)}
-
+                })}
+                {/* skeleton */}
+                {loading && new Array(6).fill(0).map((item, index) => <Skeleton key={index} />)}
+            </div>
+            {/* no data img */}
+            {!loading && !repositories.length && <img src={NoData} align="center" className="no-data" />}
         </>
+
     )
 }
 

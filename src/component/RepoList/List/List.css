@@ -177,7 +177,11 @@ input:focus{
     height:2rem;
 }
 
-
+.no-data {
+    display:block;
+    margin:auto;
+    width:50%;
+  }
 
 /* RWD */
 @media screen and (max-width:1100px) { 
@@ -197,4 +201,13 @@ input:focus{
      .arrow{
          font-size:25px
      }
+     .no-data{
+         width:70%;
+     }
+  }
+
+  @media screen and (max-width:500px) { 
+    .no-data{
+        width:100%;
+    }
   }
