@@ -1,9 +1,12 @@
 import React from 'react'
 import { useEffect, useState, useCallback, useRef } from 'react'
-export default function useUserRepoAPI({ page, query }) {
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(false);
-    const [hasMore, setHasMore] = useState(true)
+export default function useUserRepoAPI({ query }) {
+
+    const [status, setStatus] = useState({
+        loading: true,
+        error: false,
+        hasMore: true
+    })
     const [repositories, setRepositories] = useState([]);
     const readDataCount = useRef(0);
     const queryResult = () => {
@@ -12,17 +15,27 @@ export default function useUserRepoAPI({ page, query }) {
         console.log(results);
         return results;
     }
+    const timer = (repositories, data) => setTimeout(() => {
+        setStatus(prev => ({ ...prev, loading: false, hasMore: data.length > 0 }))
+        if (query.page === 1) {
+            setRepositories(repositories)
+        } else {
+
+            setRepositories(prev => [...prev, ...repositories]);
+        }
+
+    }, 1000)
     const getRepo = useCallback(async () => {
-        setLoading(true);
+        console.log("callback")
+        setStatus(prev => ({ ...prev, loading: true }))
         try {
-            const res = await fetch(`https://api.github.com/users/Maki0419-git/repos?per_page=10&page=${page}${queryResult()}`, {
+            const res = await fetch(`https://api.github.com/users/john-smilga/repos?per_page=10${queryResult()}`, {
                 "method": "GET",
                 "headers": {
                     "Accept": "application/vnd.github.v3+json"
                 }
             })
             const data = await res.json();
-
             let repositories = data.map((repo, index) => (
                 {
                     name: repo.name,
@@ -31,25 +44,28 @@ export default function useUserRepoAPI({ page, query }) {
                     updated_at: repo.updated_at
                 }
             ))
-            if (page === 1) {
-                setRepositories([...repositories])
-            } else {
-                setRepositories(prev => [...prev, ...repositories]);
-            }
+            timer(repositories, data);
 
-            setHasMore(data.length > 0);
-            setLoading(false)
-        } catch (e) {
-            setError(true)
+
+        } catch (error) {
+            setStatus(prev => ({ ...prev, error }))
         }
-    }, [page])
+    }, [query])
+
+
+
+
     //read repo data
     useEffect(() => {
         console.log("read data")
         readDataCount.current += 1
-        console.log(readDataCount.current)
+        console.log("page: " + query.page);
+        // console.log(readDataCount.current)
         getRepo();
-    }, [page])
+        return () => clearTimeout(timer)
+    }, [query])
 
-    return { loading, error, hasMore, repositories };
+
+
+    return { ...status, repositories, };
 }

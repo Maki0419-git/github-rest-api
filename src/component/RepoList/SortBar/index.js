@@ -35,7 +35,7 @@ const DropDown = ({ options, setQuery, title, query, targetRef }) => {
                             key={item}
                             className="dropdown-item"
                             style={query[title] === item ? { backgroundColor: "#E9F2C2" } : {}}
-                            onClick={() => { setAction(false); setQuery(prev => ({ ...prev, [title]: item })) }}>
+                            onClick={() => { setAction(false); setQuery(prev => ({ ...prev, [title]: item, page: 1 })) }}>
                             {item}
                         </div>
                     )}

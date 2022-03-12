@@ -14,9 +14,10 @@ export default function RepoList() {
     const [query, setQuery] = useState({
         type: "owner",
         sort: "full_name",
-        direction: "asc"
+        direction: "asc",
+        page: 1
     })
-    console.log(query)
+    // console.log(query)
 
     return (
         <>
@@ -29,7 +30,7 @@ export default function RepoList() {
                         <SortBar query={query} setQuery={setQuery} />
                     </div>
                     <div className="wrapper wrapper-card" >
-                        <List query={query} />
+                        <List query={query} setQuery={setQuery} />
                     </div>
                 </div>
             </div>
