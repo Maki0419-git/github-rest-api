@@ -1,29 +1,34 @@
 import React from 'react'
 import { useEffect, useState, useCallback, useRef } from 'react'
-export default function useUserRepoAPI({ query }) {
 
+
+const queryResult = (query) => {
+    let results = "";
+    Object.keys(query).forEach(key => results += `&${key}=${query[key]}`);
+    console.log(results);
+    return results;
+}
+
+
+export default function useUserRepoAPI({ query }) {
     const [status, setStatus] = useState({
         loading: true,
         error: false,
         hasMore: true
     })
     const [repositories, setRepositories] = useState([]);
-    const readDataCount = useRef(0);
-    const queryResult = () => {
-        let results = "";
-        Object.keys(query).forEach(key => results += `&${key}=${query[key]}`);
-        console.log(results);
-        return results;
-    }
+    const render = useRef(0);
+    // setting minimum loading time
     const timer = (repositories, data) => setTimeout(() => {
-        setStatus(prev => ({ ...prev, loading: false, hasMore: data.length > 0 }))
+        setStatus(prev => ({ ...prev, loading: false, hasMore: data.length > 0, error: false }))
         setRepositories(prev => [...prev, ...repositories]);
     }, 1000)
+    //get API data
     const getRepo = useCallback(async () => {
-        console.log("callback")
+        // console.log("callback")
         setStatus(prev => ({ ...prev, loading: true }))
         try {
-            const res = await fetch(`https://api.github.com/users/john-smilga/repos?per_page=10${queryResult()}`, {
+            const res = await fetch(`https://api.github.com/users/john-smilga/repos?per_page=10${queryResult(query)}`, {
                 "method": "GET",
                 "headers": {
                     "Accept": "application/vnd.github.v3+json"
@@ -39,22 +44,18 @@ export default function useUserRepoAPI({ query }) {
                 }
             ))
             timer(repositories, data);
-
-
         } catch (error) {
-            setStatus(prev => ({ ...prev, error }))
+            console.log(error)
+            setStatus(prev => ({ ...prev, error: true }))
         }
     }, [query])
 
 
+    useEffect(() => { render.current += 1; console.log("custom hook render :" + render.current) })
 
-
-    //read repo data
     useEffect(() => {
         console.log("read data")
-        readDataCount.current += 1
         console.log("page: " + query.page);
-        // console.log(readDataCount.current)
         if (query.page === 1) setRepositories([]);
         getRepo();
         return () => clearTimeout(timer)

@@ -6,7 +6,7 @@ html,body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color:#F7CAC9
+    background-color:#F7CAC9;
     
   }
   
@@ -22,6 +22,15 @@ html,body {
     justify-content:center;
 }
 
+.container-center{
+    display:flex;
+    flex:1;
+    justify-content:center;
+    align-items:center;
+    border: 1px solid yellow;
+    height:90vh;
+}
+
 .list-container{
     width: 75%;
 }
@@ -32,6 +41,7 @@ html,body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 100px;
+    border: 1px solid red;
  }
 
 .wrapper-header{
@@ -45,9 +55,47 @@ html,body {
     row-gap: 30px;
     grid-auto-rows: 15vh;
     margin-bottom: 20px;
-    border: 1px solid red;
 }
 
+/* home */
+.home-container{
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 100px;
+    border: 1px solid red;
+    height:100%;
+}
+
+.title-container{
+    border: 1px solid blue;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.img-container{
+    border: 1px solid blue;
+}
+
+.title-container h1{
+    color: white;
+    font-weight: bold;
+    font-size:70px;
+    font-family: "Ubuntu Mono";
+    margin:0;
+    margin-bottom: 5%;
+}
+
+.title-container p{
+    color:#FD646A;
+    font-size:30px;
+    font-family: "Ubuntu Mono";
+    margin:0;
+    margin-bottom: 5%;
+
+}
 
 /* RWD */
 @media screen and (max-width:1100px) { 

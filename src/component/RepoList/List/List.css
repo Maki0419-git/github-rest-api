@@ -1,34 +1,4 @@
 
-/* search bar */
-
-
-.search-bar input[type=text]{
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid white;
-    float: left;
-    width: 85%;
-    border-top-left-radius:40px;
-    border-bottom-left-radius:40px
-}
-
-.search-bar button {
-    float: left;
-    width: 10%;
-    padding: 7px;
-    background: white;
-    color: rgba(60, 60, 67, 0.6);
-    font-size: 17px;
-    border: 1px solid white;
-    border-left: none; /* Prevent double borders */
-    border-top-right-radius:40px;
-    border-bottom-right-radius:40px;
-    cursor: pointer;
-  }
-
-input:focus{
-    outline: none;
-}
 
 
 
@@ -66,14 +36,15 @@ input:focus{
 }
 
 .first >h2 ,.second .detail{
-    flex:6
+    flex:5
  }
 
  .star-icon{
     display:flex;
     align-items:center;
     position: relative;
-    top:2%
+    top:8%;
+    font-size: 30px;
  }
 
 .second{
@@ -148,7 +119,7 @@ input:focus{
 
     }
     100%{
-        background-color:hsl(200,20%,80%);
+        background-color:rgb(192, 200, 204);
     }
 }
 
@@ -157,14 +128,14 @@ input:focus{
     display:flex;
     align-items:flex-start;
     justify-content:flex-start;
-    width: 100%;
+    width: 90%;
     margin:3px;
 }
 
 .list-skeleton .desc:last-child{
-   width: 80%;
+    width: 85%;
    position: relative;
-   right:10%;
+   right:2.5%;
 }
 
 .list-skeleton .dot{
@@ -186,7 +157,7 @@ input:focus{
 /* RWD */
 @media screen and (max-width:1100px) { 
     .card{
-        padding:6% 10%;
+        padding:4% 5%;
     }
     .search-bar input[type=text]{
         width: 85%;
@@ -207,7 +178,13 @@ input:focus{
   }
 
   @media screen and (max-width:500px) { 
+    .card{
+        padding:6% 10%;
+    }
     .no-data{
         width:100%;
+    }
+    .star-icon{
+        font-size:25px;
     }
   }
