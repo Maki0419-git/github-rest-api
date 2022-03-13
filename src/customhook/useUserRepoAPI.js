@@ -10,7 +10,7 @@ const queryResult = (query) => {
 }
 
 
-export default function useUserRepoAPI({ query }) {
+export default function useUserRepoAPI({ query, username }) {
     const [status, setStatus] = useState({
         loading: true,
         error: false,
@@ -20,7 +20,7 @@ export default function useUserRepoAPI({ query }) {
     const render = useRef(0);
     // setting minimum loading time
     const timer = (repositories, data) => setTimeout(() => {
-        setStatus(prev => ({ ...prev, loading: false, hasMore: data.length > 0, error: false }))
+        setStatus(prev => ({ ...prev, loading: false, hasMore: data.length === 10, error: false }))
         setRepositories(prev => [...prev, ...repositories]);
     }, 1000)
     //get API data
@@ -28,7 +28,7 @@ export default function useUserRepoAPI({ query }) {
         // console.log("callback")
         setStatus(prev => ({ ...prev, loading: true }))
         try {
-            const res = await fetch(`https://api.github.com/users/john-smilga/repos?per_page=10${queryResult(query)}`, {
+            const res = await fetch(`https://api.github.com/users/${username}/repos?per_page=10${queryResult(query)}`, {
                 "method": "GET",
                 "headers": {
                     "Accept": "application/vnd.github.v3+json"

@@ -1,0 +1,90 @@
+.info-container{
+    width: 100%;
+    border: 1px solid red;
+    background-color:white;
+    border: 1px solid #CED9E3;
+    border-radius:20px;
+    box-sizing: border-box;
+    min-height:50vh;
+}
+
+.info-container h3,span,h2{
+    font-family:"Ubuntu Mono"
+}
+
+.info-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+        padding:1% 5%;
+}
+.info-header h2{
+    color:#2E4051;
+    font-size: 26px;
+}
+
+.info-header span{
+color:#396184
+}
+
+.info-divider{
+    border-top: 1px solid #CED9E3;;
+}
+
+.info-wrapper{
+    padding:5% 5%;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    column-gap: 5%;
+    border: 1px solid red;
+}
+
+.info-desc{
+    border: 1px solid blue;
+}
+
+.info-detail{
+    border: 1px solid blue;
+}
+
+.info-wrapper h3{
+    color: #2E4051;
+    font-weight:normal;
+    margin-bottom: 5%;
+    font-size: 25px;
+}
+
+.info-wrapper p{
+    color: #7E7E7E;
+    line-height: 2;
+    font-size: 18px;
+}
+
+.info-detail-container{
+    border: 2px solid #CED9E3;
+    border-radius:15px;
+    padding:3% 0;
+    position: relative;
+}
+
+
+.info-detail-container ul{
+    list-style-type: none;
+}
+
+.info-detail-container li{
+   display:flex;
+   align-items:center;
+   margin:5%;
+}
+
+.info-detail-container .icon{
+    font-size:25px;
+    color:#B3CEE5
+}
+
+.info-detail-container span{
+    color:#7E7E7E;
+    margin-left:2%;
+    font-size:22px;
+}

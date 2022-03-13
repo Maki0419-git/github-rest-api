@@ -1,12 +1,15 @@
 import React from 'react'
-import { BsGithub } from 'react-icons/bs'
+
 import './Header.css';
 
-const Header = () => {
+
+// <BsGithub className="github" />
+// <h1 >Meoldy’s  Repositories</h1>
+const Header = ({ headerIcon, header }) => {
     return (
         <div className="header">
-            <BsGithub className="github" />
-            <h1 >Meoldy’s  Repositories</h1>
+            {React.cloneElement(headerIcon, { className: "github" })}
+            <h1>{header}</h1>
         </div>
     )
 }

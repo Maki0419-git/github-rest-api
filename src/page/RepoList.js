@@ -1,11 +1,13 @@
 
 import { useEffect, useState, useRef, useCallback } from 'react';
+import { useParams } from "react-router-dom";
+import { BsGithub } from 'react-icons/bs'
 
 //css
 import './style.css'
 //components
 import Header from '../component/Common/Header';
-import { CommonBar } from '../component/Common/Bar';
+import Bar from '../component/Common/Bar';
 import List from '../component/RepoList/List';
 import SortBar from '../component/RepoList/SortBar';
 
@@ -17,20 +19,20 @@ export default function RepoList() {
         direction: "asc",
         page: 1
     })
-    // console.log(query)
+    const { username } = useParams();
 
     return (
         <>
-            <CommonBar title="Repository List" />
+            <Bar title="Repository List" goback />
             <div className="container">
 
                 <div className="list-container">
                     <div className="wrapper wrapper-header">
-                        <Header />
-                        <SortBar query={query} setQuery={setQuery} />
+                        <Header header={`${username}'s Repositories`} headerIcon={<BsGithub />} />
+                        <SortBar  {...{ query, setQuery }} />
                     </div>
 
-                    <List query={query} setQuery={setQuery} />
+                    <List {...{ query, setQuery, username }} />
                 </div>
             </div>
         </>

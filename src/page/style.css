@@ -32,7 +32,7 @@ html,body {
 }
 
 .list-container{
-    width: 75%;
+    width: 80%;
 }
 
 /* grid */
@@ -58,11 +58,13 @@ html,body {
 }
 
 /* home */
-.home-container{
-    width: 85%;
+
+
+.home-wrapper{
+    width: 90%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 100px;
+    grid-template-columns: 4fr 3.5fr;
+    column-gap: 3%;
     border: 1px solid red;
     height:100%;
 }
@@ -85,7 +87,7 @@ html,body {
     font-size:70px;
     font-family: "Ubuntu Mono";
     margin:0;
-    margin-bottom: 5%;
+    margin-bottom: 7%;
 }
 
 .title-container p{
@@ -93,12 +95,29 @@ html,body {
     font-size:30px;
     font-family: "Ubuntu Mono";
     margin:0;
-    margin-bottom: 5%;
+    margin-bottom: 7%;
+    line-height: 1.5;
 
 }
 
+.img-container{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.img-container img{
+    width: 100%;
+    height:80%;
+}
+
+/* repo */
+.repo-container{
+    width:70%;
+}
+
 /* RWD */
-@media screen and (max-width:1100px) { 
+@media screen and (max-width:1200px) { 
     .list-container{
         width: 85%;
     }
@@ -111,4 +130,27 @@ html,body {
          grid-auto-rows: 75px;
          margin-bottom: 10px;
      }
+     .img-container{
+         padding: 5% 0%;
+     }
+     .img-container img{
+         height:90%;
+     }
+     .home-wrapper{
+         grid-template-columns: none;
+         grid-row-gap:0;
+         margin-top: 5%;
+         width: 80%;
+     }
   }
+
+
+  @media screen and (max-width:650px) { 
+    .title-container h1{
+        font-size:50px;
+    }
+    .title-container p{
+        font-size:20px;
+    }
+  }
+

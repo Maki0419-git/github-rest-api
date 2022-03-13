@@ -1,23 +1,22 @@
-
+//package
 import React from 'react'
-import Dcard from "../../../assets/img/dcard.png"
+import { useNavigate } from "react-router-dom";
 import { MdOutlineArrowBackIosNew } from "react-icons/md"
+//img
+import Dcard from "../../../assets/img/dcard.png"
+//css
 import './Bar.css'
 
-const HomeBar = () => (
-    <div className="bar">
-        <img src={Dcard} />
-        <h2>2022 Web Frontend Intern Homework</h2>
-    </div>
-)
 
-const CommonBar = ({ title }) => {
+
+const Bar = ({ title, goback }) => {
+    const navigate = useNavigate();
     return (
         <div className="bar">
-            <MdOutlineArrowBackIosNew className="arrow-icon" />
+            {goback && <MdOutlineArrowBackIosNew className="arrow-icon" onClick={() => navigate(-1)} />}
             <h2>{title}</h2>
         </div>
     )
 }
 
-export { HomeBar, CommonBar } 
+export default Bar;

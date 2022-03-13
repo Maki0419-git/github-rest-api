@@ -1,23 +1,27 @@
 /* search bar */
-.search-bar{
+
+
+
+.search-wrapper{
     border: 1px solid red;
     width: 100%;
 }
 
-.search-bar input[type=text]{
+.search-wrapper input[type=text]{
     padding: 30px;
     font-size: 20px;
     border: 1px solid white;
     float: left;
-    width: 80%;
+    width: 70%;
     border-top-left-radius:20px;
     border-bottom-left-radius:20px
 }
 
-.search-bar button {
+.search-wrapper button {
     float: left;
-    width: 10%;
-    padding: 28px;
+    height:100%;
+    width: 15%;
+    /* padding: 28px; */
     background: white;
     color: rgba(60, 60, 67, 0.6);
     border: 1px solid white;
@@ -27,10 +31,20 @@
     cursor: pointer;
   }
 
-.search-bar .search-btn{
-    font-size:25px;
+.search-wrapper .search-btn{
+    font-size:30px;
 }
 
 input:focus{
     outline: none;
 }
+
+
+@media screen and (max-width:650px) { 
+    .search-wrapper input[type=text]{
+        padding:20px;
+    }
+    .search-wrapper .search-btn{
+        font-size:25px;
+    }
+  }

@@ -13,16 +13,17 @@ import Alert from '../../Common/Alert'
 
 //react icons
 import { AiFillStar } from 'react-icons/ai'
-import { BsThreeDotsVertical } from 'react-icons/bs'
-import { MdArrowForwardIos } from 'react-icons/md'
+import { BsThreeDotsVertical, BsArrowClockwise } from 'react-icons/bs'
+import { MdArrowForwardIos, MdSignalWifiStatusbarConnectedNoInternet4 } from 'react-icons/md'
+
 //css
 import './List.css';
 
 
-export default function List({ query, setQuery }) {
+export default function List({ query, setQuery, username }) {
     const render = useRef(0);
     const observer = useRef(null);
-    const { loading, error, hasMore, repositories, } = useUserRepoAPI({ query });
+    const { loading, error, hasMore, repositories, } = useUserRepoAPI({ query, username });
     // console.log(`List Loading ${loading}`)
     const refCallback = useCallback((node) => {
         // console.log(loading);
@@ -83,7 +84,12 @@ export default function List({ query, setQuery }) {
             {/* no data img */}
             {!loading && !repositories.length && <img src={NoData} align="center" className="no-data" />}
             {/* no wifi */}
-            {error && <Alert retry={() => setQuery(prev => ({ ...prev }))} />}
+            {error &&
+                <Alert
+                    messageIcon={<MdSignalWifiStatusbarConnectedNoInternet4 />} message={"Warning : please check your wifi connection"}
+                    actionIcon={<BsArrowClockwise />} action={() => setQuery(prev => ({ ...prev }))}
+                />
+            }
         </>
 
     )

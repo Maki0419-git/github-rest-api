@@ -4,7 +4,6 @@
     height:7vh;
     display:flex;
     align-items: center;
-  
 }
 
 .bar img{
@@ -15,6 +14,8 @@
 
 .bar h2{
     color: #396184;
+    font-family: "Ubuntu Mono";
+    font-weight: 500;
 }
 
 .arrow-icon{
@@ -23,5 +24,6 @@
     font-weight: bold;
     margin-top: 4px;
     margin-right:1%;
+    cursor: pointer;
 
 }

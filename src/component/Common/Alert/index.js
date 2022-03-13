@@ -1,14 +1,15 @@
 import React from 'react'
 import './Alert.css'
-import { AiFillWarning } from 'react-icons/ai'
-import { BsArrowClockwise } from 'react-icons/bs'
 
-const Alert = ({ retry }) => {
+
+// Warning : please check your wifi connection
+// { children, Icon }: ButtonProps
+const Alert = ({ message, messageIcon, action, actionIcon }) => {
     return (
         <div className="alert show">
-            <AiFillWarning className="icon warn" />
-            <span>Warning : please check your wifi connection</span>
-            <BsArrowClockwise className="icon retry" onClick={() => retry()} />
+            {React.cloneElement(messageIcon, { className: "title-icon" })}
+            <span>{message}</span>
+            {React.cloneElement(actionIcon, { className: "action-icon", onClick: () => action() })}
         </div>
     )
 }
