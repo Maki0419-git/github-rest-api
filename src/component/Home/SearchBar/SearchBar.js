@@ -1,12 +1,14 @@
+//package
 import { AiOutlineSearch } from 'react-icons/ai'
 import { useNavigate } from "react-router-dom";
 import { useState, } from 'react'
 import { AiFillWarning } from 'react-icons/ai'
 import { TiDelete } from 'react-icons/ti'
-
-import Alert from '../../Common/Alert';
-
+//components
+import Alert from '../../Common/Alert/Alert';
+//css
 import './SearchBar.css'
+
 export default function SearchBar() {
     const [username, setUserName] = useState("")
     const [alert, setAlert] = useState(false);

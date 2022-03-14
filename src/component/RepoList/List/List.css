@@ -148,7 +148,7 @@
     height:2rem;
 }
 
-.no-data {
+.img-alert {
     display:block;
     margin:auto;
     width:50%;
@@ -172,7 +172,7 @@
      .arrow{
          font-size:25px
      }
-     .no-data{
+     .img-alert{
          width:70%;
      }
   }
@@ -181,7 +181,7 @@
     .card{
         padding:6% 10%;
     }
-    .no-data{
+    .img-alert{
         width:100%;
     }
     .star-icon{

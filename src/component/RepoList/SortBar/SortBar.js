@@ -1,7 +1,9 @@
+//package
 import React from 'react'
-import './SortBar.css'
 import { RiArrowDownSFill } from 'react-icons/ri'
 import { useState, useRef, useEffect } from 'react'
+//css
+import './SortBar.css'
 
 const typeOptions = ["all", "owner", "member"];
 const sortOptions = ["created", "updated", "pushed", "full_name"];

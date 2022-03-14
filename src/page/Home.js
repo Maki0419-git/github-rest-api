@@ -1,6 +1,9 @@
+//package
 import React from 'react'
-import Bar from '../component/Common/Bar';
-import SearchBar from '../component/Home/SearchBar';
+//components
+import Bar from '../component/Common/Bar/Bar';
+import SearchBar from '../component/Home/SearchBar/SearchBar';
+//img
 import Hero from '../assets/img/hero.png'
 
 const Home = () => {

@@ -15,10 +15,27 @@
 }
 
 .show{
-    animation:show_slide 1s ease forwards;
+    animation:show_slide 1.5s ease forwards;
 }
 
+.close{
+    animation:close_slide 1.5s ease forwards reverse ;
+}
+
+
 @keyframes show_slide {
+    0%{
+        transform:translateX(-100%)
+    }
+    40%{
+        transform:translateX(20%)
+    } 
+    100%{
+        transform:translateX(15%)
+    }   
+}
+
+@keyframes close_slide {
     0%{
         transform:translateX(-100%)
     }

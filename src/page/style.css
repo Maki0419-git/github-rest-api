@@ -20,6 +20,7 @@ html,body {
     display:flex;
     flex:1;
     justify-content:center;
+    border: 1px solid red;
 }
 
 .container-center{
@@ -113,7 +114,14 @@ html,body {
 
 /* repo */
 .repo-container{
-    width:70%;
+    width:80%;
+    border: 1px solid red;
+}
+
+/* not found */
+
+.not-found-container{
+    height:90vh;
 }
 
 /* RWD */
@@ -142,6 +150,7 @@ html,body {
          margin-top: 5%;
          width: 80%;
      }
+
   }
 
 
@@ -152,5 +161,9 @@ html,body {
     .title-container p{
         font-size:20px;
     }
+    .repo-container{
+        width:95%;
+  }
+
   }
 

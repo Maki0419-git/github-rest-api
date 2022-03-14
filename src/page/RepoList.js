@@ -1,15 +1,17 @@
-
+//package
 import { useEffect, useState, useRef, useCallback } from 'react';
 import { useParams } from "react-router-dom";
 import { BsGithub } from 'react-icons/bs'
 
+//components
+import Header from '../component/Common/Header/Header';
+import Bar from '../component/Common/Bar/Bar';
+import List from '../component/RepoList/List/List';
+import SortBar from '../component/RepoList/SortBar/SortBar';
+
 //css
 import './style.css'
-//components
-import Header from '../component/Common/Header';
-import Bar from '../component/Common/Bar';
-import List from '../component/RepoList/List';
-import SortBar from '../component/RepoList/SortBar';
+
 
 
 export default function RepoList() {

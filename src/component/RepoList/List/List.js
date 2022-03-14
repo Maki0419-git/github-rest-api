@@ -1,6 +1,10 @@
 //package
-import { useState, useCallback, useRef, useEffect } from 'react'
+import { useCallback, useRef, useEffect } from 'react'
 import moment from 'moment';
+import { AiFillStar } from 'react-icons/ai'
+import { BsThreeDotsVertical, } from 'react-icons/bs'
+import { MdArrowForwardIos, } from 'react-icons/md'
+import { useNavigate } from "react-router-dom";
 
 // custom hook
 import useUserRepoAPI from '../../../customhook/useUserRepoAPI';
@@ -8,22 +12,19 @@ import useUserRepoAPI from '../../../customhook/useUserRepoAPI';
 //img
 import NoData from "../../../assets/img/no-data.png"
 
-//components
-import Alert from '../../Common/Alert'
 
-//react icons
-import { AiFillStar } from 'react-icons/ai'
-import { BsThreeDotsVertical, BsArrowClockwise } from 'react-icons/bs'
-import { MdArrowForwardIos, MdSignalWifiStatusbarConnectedNoInternet4 } from 'react-icons/md'
+//components
+import Error from '../../Common/Error/Error'
 
 //css
 import './List.css';
 
 
 export default function List({ query, setQuery, username }) {
+    let navigate = useNavigate();
     const render = useRef(0);
     const observer = useRef(null);
-    const { loading, error, hasMore, repositories, } = useUserRepoAPI({ query, username });
+    const { loading, error, errorType, hasMore, repositories, } = useUserRepoAPI({ query, username });
     // console.log(`List Loading ${loading}`)
     const refCallback = useCallback((node) => {
         // console.log(loading);
@@ -46,11 +47,15 @@ export default function List({ query, setQuery, username }) {
     useEffect(() => { render.current += 1; console.log("list render :" + render.current) })
     return (
         <>
+            {console.log("render")}
             {/* card */}
             <div className="wrapper wrapper-card" >
                 {repositories.map((repo, index) => {
                     return (
-                        <div className="card" key={index} ref={index + 1 === repositories.length ? refCallback : null}>
+                        <div className="card"
+                            key={index} ref={index + 1 === repositories.length ? refCallback : null}
+                            onClick={() => navigate(`/users/${username}/repos/${repo.name}`)}
+                        >
                             <div className="first">
                                 {/* star icon */}
                                 <AiFillStar color="#FFE177" className="star-icon" />
@@ -81,15 +86,11 @@ export default function List({ query, setQuery, username }) {
                 {/* skeleton */}
                 {loading && new Array(6).fill(0).map((item, index) => <Skeleton key={index} />)}
             </div>
+
             {/* no data img */}
-            {!loading && !repositories.length && <img src={NoData} align="center" className="no-data" />}
-            {/* no wifi */}
-            {error &&
-                <Alert
-                    messageIcon={<MdSignalWifiStatusbarConnectedNoInternet4 />} message={"Warning : please check your wifi connection"}
-                    actionIcon={<BsArrowClockwise />} action={() => setQuery(prev => ({ ...prev }))}
-                />
-            }
+            {!error && !loading && !repositories.length && <img src={NoData} align="center" className="img-alert" />}
+            {/* error */}
+            {error && <Error errorType={errorType} setQuery={setQuery} />}
         </>
 
     )
