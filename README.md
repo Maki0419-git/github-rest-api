@@ -27,6 +27,45 @@ You may also see any lint errors in the console.
 * you will be routed to  next page with the route  `/users/{username}/repos/{repo}`.
   * there will be a API call to retrieve the repository's information.
 
+## Folder Structure
+
+###`src`
+
+* [assets/](.\src\assets)
+  * [img/](.\src\assets\img)
+    * [hero.png](.\src\assets\img\hero.png)
+    * [no-data.png](.\src\assets\img\no-data.png)
+    * [not-found.png](.\src\assets\img\not-found.png)
+* [component/](.\src\component)
+  * [Common/](.\src\component\Common)
+    * [Alert/](.\src\component\Common\Alert)
+    * [Bar/](.\src\component\Common\Bar)
+    * [Error/](.\src\component\Common\Error)
+    * [Header/](.\src\component\Common\Header)
+  * [Home/](.\src\component\Home)
+    * [SearchBar/](.\src\component\Home\SearchBar)
+  * [Repo/](.\src\component\Repo)
+    * [Info/](.\src\component\Repo\Info)
+  * [RepoList/](.\src\component\RepoList)
+    * [List/](.\src\component\RepoList\List)
+    * [SortBar/](.\src\component\RepoList\SortBar)
+* [customhook/](.\src\customhook)
+  * [useRepoInfoAPI.js](.\src\customhook\useRepoInfoAPI.js)
+  * [useUserRepoAPI.js](.\src\customhook\useUserRepoAPI.js)
+* [error/](.\src\error)
+  * [handleAPIError.js](.\src\error\handleAPIError.js)
+* [page/](.\src\page)
+  * [Home.js](.\src\page\Home.js)
+  * [NotFound.js](.\src\page\NotFound.js)
+  * [page.css](.\src\page\page.css)
+  * [Repo.js](.\src\page\Repo.js)
+  * [RepoList.js](.\src\page\RepoList.js)
+* [App.js](.\src\App.js)
+* [index.js](.\src\index.js)
+* [logo.svg](.\src\logo.svg)
+* [reportWebVitals.js](.\src\reportWebVitals.js)
+* [setupTests.js](.\src\setupTests.js)
+
 
 ### Deployment
 
