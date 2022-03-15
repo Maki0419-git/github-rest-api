@@ -15,6 +15,70 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+## Project structure
+`
+│  App.js\
+│  index.js\
+│  logo.svg\
+│  reportWebVitals.js\
+│  setupTests.js\
+│\
+├─assets\
+│  └─img\
+│          hero.png\
+│          no-data.png\
+│          not-found.png\
+│
+├─component\
+│  ├─Common\
+│  │  ├─Alert\
+│  │  │      Alert.css\
+│  │  │      Alert.js\
+│  │  │\
+│  │  ├─Bar\
+│  │  │      Bar.css\
+│  │  │      Bar.js\
+│  │  │
+│  │  ├─Error\
+│  │  │      Error.js\
+│  │  │
+│  │  └─Header\
+│  │          Header.css\
+│  │          Header.js\
+│  │
+│  ├─Home\
+│  │  └─SearchBar\
+│  │          SearchBar.css\
+│  │          SearchBar.js\
+│  │\
+│  ├─Repo\
+│  │  └─Info\
+│  │          Info.css\
+│  │          Info.js\
+│  │\
+│  └─RepoList\
+│      ├─List\
+│      │      List.css\
+│      │      List.js\
+│      │\
+│      └─SortBar\
+│              SortBar.css\
+│              SortBar.js\
+│
+├─customhook\
+│      useRepoInfoAPI.js\
+│      useUserRepoAPI.js\
+│
+├─error\
+│      handleAPIError.js\
+│
+└─page\
+        Home.js\
+        NotFound.js\
+        page.css\
+        Repo.js\
+        RepoList.js\
+`
 ## Website Introduction
 
 * Enter username at Homepage's search bar to view his/her repositories.
