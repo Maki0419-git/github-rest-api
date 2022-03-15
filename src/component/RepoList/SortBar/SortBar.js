@@ -13,6 +13,13 @@ const directionOptions = ["asc", "desc"];
 
 const DropDown = ({ options, setQuery, title, query, targetRef }) => {
     const [action, setAction] = useState(false);
+    const handleClick = (title, item) => {
+        setAction(false);
+        setQuery(prev => ({ ...prev, [title]: item, page: 1 }))
+        let APIQuery = JSON.parse(localStorage.getItem('APIQuery'));
+        APIQuery[title] = item;
+        localStorage.setItem('APIQuery', JSON.stringify(APIQuery))
+    }
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (targetRef.current && !targetRef.current.contains(event.target)) {
@@ -38,7 +45,7 @@ const DropDown = ({ options, setQuery, title, query, targetRef }) => {
                             key={item}
                             className="dropdown-item"
                             style={query[title] === item ? { backgroundColor: "#E9F2C2" } : {}}
-                            onClick={() => { setAction(false); setQuery(prev => ({ ...prev, [title]: item, page: 1 })) }}>
+                            onClick={() => handleClick(title, item)}>
                             {item}
                         </div>
                     )}

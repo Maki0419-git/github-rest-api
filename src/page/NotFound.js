@@ -3,7 +3,7 @@ import Bar from '../component/Common/Bar/Bar';
 //img
 import NotFoundIMG from '../../src/assets/img/not-found.png'
 //css
-import './style.css';
+import './page.css';
 
 const NotFound = () => {
     return (

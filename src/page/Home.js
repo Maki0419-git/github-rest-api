@@ -5,6 +5,8 @@ import Bar from '../component/Common/Bar/Bar';
 import SearchBar from '../component/Home/SearchBar/SearchBar';
 //img
 import Hero from '../assets/img/hero.png'
+//css
+import './page.css'
 
 const Home = () => {
     return (

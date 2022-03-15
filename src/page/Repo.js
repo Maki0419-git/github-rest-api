@@ -9,7 +9,7 @@ import Header from '../component/Common/Header/Header';
 import Info from '../component/Repo/Info/Info';
 
 //css
-import './style.css';
+import './page.css';
 
 const Repo = () => {
     const { username, repo } = useParams();
