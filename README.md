@@ -32,35 +32,68 @@ You may also see any lint errors in the console.
 
 ### `src`
 
-* [assets/]
-  * [img]
-* [component/]
-  * [Common/]
-    * [Alert]
-    * [Bar]
-    * [Error]
-    * [Header]
-  * [Home/]
-    * [SearchBar]
-  * [Repo/]
-    * [Info]
-  * [RepoList/]
-    * [List]
-    * [SortBar]
-* [customhook/]
-  * [useRepoInfoAPI.js]
-  * [useUserRepoAPI.js]
-* [error/]
-  * [handleAPIError.js]
-* [page/]
-  * [Home.js]
-  * [NotFound.js]
-  * [page.css]
-  * [Repo.js]
-  * [RepoList.js]
-* [App.js]
-* [index.js]
-
+```
+.
+│  App.js
+│  index.js
+│  logo.svg
+│
+├─assets
+│  └─img
+│          hero.png
+│          no-data.png
+│          not-found.png
+│
+├─component
+│  ├─Common
+│  │  ├─Alert
+│  │  │      Alert.css
+│  │  │      Alert.js
+│  │  │
+│  │  ├─Bar
+│  │  │      Bar.css
+│  │  │      Bar.js
+│  │  │
+│  │  ├─Error
+│  │  │      Error.js
+│  │  │
+│  │  └─Header
+│  │          Header.css
+│  │          Header.js
+│  │
+│  ├─Home
+│  │  └─SearchBar
+│  │          SearchBar.css
+│  │          SearchBar.js
+│  │
+│  ├─Repo
+│  │  └─Info
+│  │          Info.css
+│  │          Info.js
+│  │
+│  └─RepoList
+│      ├─List
+│      │      List.css
+│      │      List.js
+│      │
+│      └─SortBar
+│              SortBar.css
+│              SortBar.js
+│
+├─customhook
+│      useRepoInfoAPI.js
+│      useUserRepoAPI.js
+│
+├─error
+│      handleAPIError.js
+│
+└─page
+        Home.js
+        NotFound.js
+        page.css
+        Repo.js
+        RepoList.js
+```
 
 
 ### Deployment

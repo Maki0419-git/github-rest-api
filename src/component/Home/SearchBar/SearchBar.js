@@ -2,7 +2,6 @@
 import { AiOutlineSearch } from 'react-icons/ai'
 import { useNavigate } from "react-router-dom";
 import { useState, } from 'react'
-import { AiFillWarning } from 'react-icons/ai'
 import { TiDelete } from 'react-icons/ti'
 //components
 import Alert from '../../Common/Alert/Alert';
@@ -34,7 +33,7 @@ export default function SearchBar() {
             </div>
             <Alert
                 open={alert}
-                messageIcon={<AiFillWarning />} message={"Warning : please enter username !"}
+                message={"Warning : please enter username !"}
                 actionIcon={<TiDelete />} action={() => setAlert(false)}
             />
 
