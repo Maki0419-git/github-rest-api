@@ -24,7 +24,7 @@ Open [Figma](https://www.figma.com/file/A7tIAqKmsWtwpVRd9rhmai/github-rest-api?n
 * you will be routed to next page with the route `/users/{username}/repos`.
   * there will be a API call to retrieve user's repositories.
   * each request will return a list of repositories `limit to 10`.
-  * scrolling to the bottom of the page , trigger the event to load next 10 repositories until no more repositories.
+  * scrolling to the bottom of the page , will trigger the event to load next 10 repositories until no more repositories.
   * `you can even sort the result with sort bar on the top of page.🙌🙌`
 * choose the repository you want to view.
 *   you will be routed to next page with the route `/users/{username}/repos/{repo}`.
