@@ -3,31 +3,30 @@
 
 
 .search-wrapper{
+    display:flex;
     width: 100%;
+    height: 10vh;
+    background-color:white;
+    border-radius: 20px;
 }
 
 .search-wrapper input[type=text]{
+    margin:0;
     padding: 30px;
     font-size: 20px;
+    flex: 9;
     border: 1px solid white;
-    float: left;
-    width: 70%;
-    border-top-left-radius:20px;
-    border-bottom-left-radius:20px
+    border-radius: 20px;
 }
 
 .search-wrapper button {
-    float: left;
-    height:100%;
-    width: 15%;
-    /* padding: 28px; */
+    margin:0;
+    flex: 2;
     background: white;
     color: rgba(60, 60, 67, 0.6);
     border: 1px solid white;
-    border-left: none; /* Prevent double borders */
-    border-top-right-radius:20px;
-    border-bottom-right-radius:20px;
     cursor: pointer;
+    border-radius: 20px;
   }
 
 .search-wrapper .search-btn{
@@ -40,10 +39,15 @@ input:focus{
 
 
 @media screen and (max-width:650px) { 
+    .search-wrapper{
+        height:7vh;
+    }
     .search-wrapper input[type=text]{
-        padding:20px;
+        font-size:15px;
+        padding:3px;
     }
     .search-wrapper .search-btn{
         font-size:25px;
     }
+
   }
