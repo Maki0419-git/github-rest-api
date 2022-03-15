@@ -16,7 +16,7 @@ You may also see any lint errors in the console.
 
 ### 📜 Website Design
 
-Open Figma to view website design [https://www.figma.com/file/A7tIAqKmsWtwpVRd9rhmai/github-rest-api?node-id=0%3A1"]
+Open [Figma](https://www.figma.com/file/A7tIAqKmsWtwpVRd9rhmai/github-rest-api?node-id=0%3A1") to view the website design 
 
 ### 📜 Website Introduction
 
@@ -34,9 +34,8 @@ Open Figma to view website design [https://www.figma.com/file/A7tIAqKmsWtwpVRd9r
 
 ### 📜 Website Architecture
 
+![image](https://github.com/Maki0419-git/github-rest-api/blob/master/src/assets/img/2022%20Web%20Frontend%20Intern%20Homework.png)
 
-
-{% file src=".gitbook/assets/2022 Web Frontend Intern Homework (1).png" %}
 
 ### 📜 Folder Structure
 
@@ -107,4 +106,4 @@ Open Figma to view website design [https://www.figma.com/file/A7tIAqKmsWtwpVRd9r
 
 ### 🔥 Deployment
 
-Web Page was deployed to github-pages 😊😊 : https://maki0419-git.github.io/github-rest-api"
+Website was deployed to github-pages 😊😊 : https://maki0419-git.github.io/github-rest-api
