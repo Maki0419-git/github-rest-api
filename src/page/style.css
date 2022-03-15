@@ -19,44 +19,12 @@ html,body {
 .container{
     display:flex;
     flex:1;
-    justify-content:center;
-    border: 1px solid red;
-}
-
-.container-center{
-    display:flex;
-    flex:1;
+    height:90vh;
     justify-content:center;
     align-items:center;
-    border: 1px solid yellow;
-    height:90vh;
 }
 
-.list-container{
-    width: 80%;
-}
 
-/* grid */
-
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 100px;
-    border: 1px solid red;
- }
-
-.wrapper-header{
-    row-gap: 30px;
-    grid-auto-rows: 110px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
-
-.wrapper-card{
-    row-gap: 30px;
-    grid-auto-rows: 15vh;
-    margin-bottom: 20px;
-}
 
 /* home */
 
@@ -66,21 +34,16 @@ html,body {
     display: grid;
     grid-template-columns: 4fr 3.5fr;
     column-gap: 3%;
-    border: 1px solid red;
     height:100%;
 }
 
 .title-container{
-    border: 1px solid blue;
     display:flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
 }
 
-.img-container{
-    border: 1px solid blue;
-}
 
 .title-container h1{
     color: white;
@@ -112,17 +75,55 @@ html,body {
     height:80%;
 }
 
+/* RepoList */
+
+
+.list-container{
+    width: 80%;
+    height:100%;
+
+}
+
+.list-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 100px;
+    margin-bottom: 5px;
+   
+ }
+
+.list-wrapper-header{
+    row-gap: 30px;
+    grid-auto-rows: 110px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.wrapper-card{
+    row-gap: 30px;
+    grid-auto-rows: 15vh;
+    margin-bottom: 20px;
+}
+
+
+
 /* repo */
 .repo-container{
     width:80%;
-    border: 1px solid red;
+    height:100%;
 }
 
-/* not found */
+/* skeleton */
 
-.not-found-container{
-    height:90vh;
+.skeleton{
+    animation:skeleton-loading 1s linear infinite alternate;
+    opacity: .5;
+    height: 100%;
+    border: 1px solid transparent;
+    border-radius:10px;
+    
 }
+
 
 /* RWD */
 @media screen and (max-width:1200px) { 

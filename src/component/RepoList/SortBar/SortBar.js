@@ -5,6 +5,7 @@ import { useState, useRef, useEffect } from 'react'
 //css
 import './SortBar.css'
 
+//sort bar
 const typeOptions = ["all", "owner", "member"];
 const sortOptions = ["created", "updated", "pushed", "full_name"];
 const directionOptions = ["asc", "desc"];

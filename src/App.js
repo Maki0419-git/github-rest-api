@@ -13,7 +13,7 @@ function App() {
 
       <Route path="/" element={<Home />} />
       <Route path="/users/:username/repos" element={<RepoList />} />
-      <Route path="/users/:username/repos/:repo" element={<Repo />} />
+      <Route path="/repos/:username/:repo" element={<Repo />} />
       <Route path='*' element={<NotFound />} />
     </Routes>
   );

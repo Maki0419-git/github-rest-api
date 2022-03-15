@@ -29,7 +29,7 @@ export default function RepoList() {
             <div className="container">
 
                 <div className="list-container">
-                    <div className="wrapper wrapper-header">
+                    <div className="list-wrapper list-wrapper-header">
                         <Header header={`${username}'s Repositories`} headerIcon={<BsGithub />} />
                         <SortBar  {...{ query, setQuery }} />
                     </div>

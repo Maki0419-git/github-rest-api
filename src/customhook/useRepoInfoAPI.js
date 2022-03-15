@@ -10,35 +10,28 @@ const useRepoInfoAPI = ({ query }) => {
     const [status, setStatus] = useState({
         loading: true,
         error: false,
-        errorType: "",
+        errorMessage: "",
     })
-    const [info, setInfo] = useState({
-        full_name: "project",
-        html_url: "",
-        description: "",
-        clone_url: "https://github.com/Maki0419-git/cloud-message.git",
-        watchers_count: 0,
-        stargazers_count: 0,
-        default_branch: "master",
-        updated_at: moment().startOf("seconds").fromNow(),
-        language: "javascript",
-        size: 0,
-    });
+    const [info, setInfo] = useState({});
     // setting minimum loading time
     const timer = (value) => setTimeout(() => {
-        setStatus(prev => ({ ...prev, loading: false, error: false, errorType: "" }))
+        setStatus(prev => ({ ...prev, loading: false }))
         setInfo(value);
     }, 1000)
     const readInfo = useCallback(async () => {
-        setStatus(prev => ({ ...prev, loading: true }))
+        setStatus(prev => ({ ...prev, loading: true, error: false, errorMessage: "" }))
         try {
-            const options = { method: 'GET', url: `https://api.github.com/repos/${query.username}/${query.repo}` };
+            const options = {
+                method: 'GET',
+                url: `https://api.github.com/repos/${query.username}/${query.repo}`,
+                headers: { Accept: 'application/vnd.github.v3+json' }
+            };
             const { data } = await axios.request(options);
             const { full_name, html_url, description, clone_url, watchers_count,
-                stargazers_count, default_branch, updated_at, language, size } = data;
+                stargazers_count, default_branch, pushed_at, language, size } = data;
             timer({
                 full_name, html_url, description, clone_url, watchers_count,
-                stargazers_count, default_branch, updated_at: moment(updated_at).startOf("seconds").fromNow(), language, size
+                stargazers_count, default_branch, pushed_at: moment(pushed_at).startOf("seconds").fromNow(), language, size
             });
         } catch (error) {
             handleAPIError(error, setStatus);

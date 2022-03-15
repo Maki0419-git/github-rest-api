@@ -1,8 +1,5 @@
 
 
-
-
-
 /* card */
 
 .card{
@@ -13,6 +10,7 @@
     justify-content: flex-start;
     align-items: center;
     padding: 5% 10%;
+    margin-bottom: 5px;
   
 }
 
@@ -103,26 +101,6 @@
 }
 
 /* skeleton */
-
-
-.skeleton{
-    animation:skeleton-loading 1s linear infinite alternate;
-    opacity: .5;
-    height: 100%;
-    
-}
-
-
-@keyframes skeleton-loading {
-    0%{
-        background-color:hsl(200,20%,70%);
-
-    }
-    100%{
-        background-color:rgb(192, 200, 204);
-    }
-}
-
 
 .list-skeleton .desc{
     display:flex;

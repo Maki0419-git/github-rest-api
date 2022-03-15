@@ -1,13 +1,14 @@
 
 .sort-bar{
     display: flex;
-    align-items:center
+    align-items:center;
+    z-index: 2;
 }
 
 .dropdown{
     width:calc(100%/3);
     position: relative;
-    z-index: 2;
+    
    
 }
 

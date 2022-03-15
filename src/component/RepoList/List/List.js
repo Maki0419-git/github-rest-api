@@ -24,7 +24,7 @@ export default function List({ query, setQuery, username }) {
     let navigate = useNavigate();
     const render = useRef(0);
     const observer = useRef(null);
-    const { loading, error, errorType, hasMore, repositories, } = useUserRepoAPI({ query, username });
+    const { loading, error, errorMessage, hasMore, repositories, } = useUserRepoAPI({ query, username });
     // console.log(`List Loading ${loading}`)
     const refCallback = useCallback((node) => {
         // console.log(loading);
@@ -48,13 +48,15 @@ export default function List({ query, setQuery, username }) {
     return (
         <>
             {console.log("render")}
-            {/* card */}
-            <div className="wrapper wrapper-card" >
-                {repositories.map((repo, index) => {
+
+            <div className="list-wrapper wrapper-card" >
+
+                {/* no  error then card */}
+                {!error && repositories.map((repo, index) => {
                     return (
                         <div className="card"
                             key={index} ref={index + 1 === repositories.length ? refCallback : null}
-                            onClick={() => navigate(`/users/${username}/repos/${repo.name}`)}
+                            onClick={() => navigate(`/repos/${username}/${repo.name}`)}
                         >
                             <div className="first">
                                 {/* star icon */}
@@ -83,14 +85,14 @@ export default function List({ query, setQuery, username }) {
                     )
 
                 })}
-                {/* skeleton */}
+                {/* if loading then skeleton */}
                 {loading && new Array(6).fill(0).map((item, index) => <Skeleton key={index} />)}
             </div>
 
             {/* no data img */}
             {!error && !loading && !repositories.length && <img src={NoData} align="center" className="img-alert" />}
             {/* error */}
-            {error && <Error errorType={errorType} setQuery={setQuery} />}
+            <Error {...{ error, errorMessage, setQuery }} />
         </>
 
     )

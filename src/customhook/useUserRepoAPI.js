@@ -16,20 +16,20 @@ export default function useUserRepoAPI({ query, username }) {
     const [status, setStatus] = useState({
         loading: true,
         error: false,
-        errorType: "",
+        errorMessage: "",
         hasMore: true
     })
     const [repositories, setRepositories] = useState([]);
     const render = useRef(0);
     // setting minimum loading time
     const timer = (repositories, data) => setTimeout(() => {
-        setStatus(prev => ({ ...prev, loading: false, hasMore: data.length === 10, error: false, errorType: "" }))
+        setStatus(prev => ({ ...prev, loading: false, hasMore: data.length === 10, }))
         setRepositories(prev => [...prev, ...repositories]);
     }, 1000)
     //get API data
     const getRepo = useCallback(async () => {
         // console.log("callback")
-        setStatus(prev => ({ ...prev, loading: true }))
+        setStatus(prev => ({ ...prev, loading: true, error: false, errorMessage: "" }))
         try {
             const options = {
                 method: 'GET',
@@ -51,7 +51,7 @@ export default function useUserRepoAPI({ query, username }) {
             handleAPIError(error, setStatus);
 
         }
-    }, [query])
+    }, [query, username])
 
 
     useEffect(() => { render.current += 1; console.log("custom hook render :" + render.current) })
@@ -62,7 +62,7 @@ export default function useUserRepoAPI({ query, username }) {
         if (query.page === 1) setRepositories([]);
         getRepo();
         return () => clearTimeout(timer)
-    }, [query])
+    }, [query, username])
 
 
 

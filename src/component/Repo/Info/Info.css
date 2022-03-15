@@ -114,16 +114,7 @@ cursor: pointer;
 
 }
 
-/* skeleton */
 
-.skeleton{
-    animation:skeleton-loading 1s linear infinite alternate;
-    opacity: .5;
-    height: 100%;
-    border: 1px solid transparent;
-    border-radius:10px;
-    
-}
 
 .skeleton-header{
     width: 100%;

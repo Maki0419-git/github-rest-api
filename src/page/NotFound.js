@@ -9,7 +9,7 @@ const NotFound = () => {
     return (
         <>
             <Bar title="Dcard 2022 Web Frontend Intern Homework" />
-            <div className="container not-found-container">
+            <div className="container">
                 <img src={NotFoundIMG} align="center" height="100%" />
             </div>
 

@@ -18,6 +18,8 @@ const Repo = () => {
         repo
     })
 
+    useEffect(() => setQuery({ username, repo }), [username, repo])
+
     return (
         <>
             <Bar title="Repository" goback />

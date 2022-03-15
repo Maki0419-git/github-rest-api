@@ -2,8 +2,7 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
 import { MdOutlineArrowBackIosNew } from "react-icons/md"
-//img
-import Dcard from "../../../assets/img/dcard.png"
+
 //css
 import './Bar.css'
 

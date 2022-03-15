@@ -32,10 +32,11 @@ export default function SearchBar() {
                     <AiOutlineSearch className="search-btn" />
                 </button>
             </div>
-            {alert && <Alert
+            <Alert
+                open={alert}
                 messageIcon={<AiFillWarning />} message={"Warning : please enter username !"}
                 actionIcon={<TiDelete />} action={() => setAlert(false)}
-            />}
+            />
 
         </>
 
