@@ -1,12 +1,6 @@
----
-description: >-
-  Chain the GitHub REST API and use React to implement a website that browses a
-  single-user GitHub repository.
-cover: .gitbook/assets/748076.png
-coverY: 0
----
 
-# Dcard 2022 Web Frontend Intern Homework
+
+# ✨ Dcard 2022 Web Frontend Intern Homework ✨
 
 ### 📜 Available Scripts
 
@@ -22,7 +16,7 @@ You may also see any lint errors in the console.
 
 ### 📜 Website Design
 
-{% embed url="https://www.figma.com/file/A7tIAqKmsWtwpVRd9rhmai/github-rest-api?node-id=0%3A1" %}
+Open Figma to view website design [https://www.figma.com/file/A7tIAqKmsWtwpVRd9rhmai/github-rest-api?node-id=0%3A1"]
 
 ### 📜 Website Introduction
 
@@ -34,7 +28,6 @@ You may also see any lint errors in the console.
   * `you can even sort the result with sort bar on the top of page.🙌🙌`
 * choose the repository you want to view.
 *   you will be routed to next page with the route `/users/{username}/repos/{repo}`.
-
     * there will be a API call to retrieve the repository's information.
 
 
@@ -114,6 +107,4 @@ You may also see any lint errors in the console.
 
 ### 🔥 Deployment
 
-Web Page was deployed to github-pages 😊😊 :&#x20;
-
-{% embed url="https://maki0419-git.github.io/github-rest-api" %}
+Web Page was deployed to github-pages 😊😊 : https://maki0419-git.github.io/github-rest-api"
