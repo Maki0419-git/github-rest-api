@@ -17,67 +17,67 @@ You may also see any lint errors in the console.
 
 ## Project structure
 `
-│  App.js
-│  index.js
-│  logo.svg
-│  reportWebVitals.js
-│  setupTests.js
+│  App.js\
+│  index.js\
+│  logo.svg\
+│  reportWebVitals.js\
+│  setupTests.js\
+│\
+├─assets\
+│  └─img\
+│          hero.png\
+│          no-data.png\
+│          not-found.png\
 │
-├─assets
-│  └─img
-│          hero.png
-│          no-data.png
-│          not-found.png
-│
-├─component
-│  ├─Common
-│  │  ├─Alert
-│  │  │      Alert.css
-│  │  │      Alert.js
+├─component\
+│  ├─Common\
+│  │  ├─Alert\
+│  │  │      Alert.css\
+│  │  │      Alert.js\
+│  │  │\
+│  │  ├─Bar\
+│  │  │      Bar.css\
+│  │  │      Bar.js\
 │  │  │
-│  │  ├─Bar
-│  │  │      Bar.css
-│  │  │      Bar.js
+│  │  ├─Error\
+│  │  │      Error.js\
 │  │  │
-│  │  ├─Error
-│  │  │      Error.js
-│  │  │
-│  │  └─Header
-│  │          Header.css
-│  │          Header.js
+│  │  └─Header\
+│  │          Header.css\
+│  │          Header.js\
 │  │
-│  ├─Home
-│  │  └─SearchBar
-│  │          SearchBar.css
-│  │          SearchBar.js
-│  │
-│  ├─Repo
-│  │  └─Info
-│  │          Info.css
-│  │          Info.js
-│  │
-│  └─RepoList
-│      ├─List
-│      │      List.css
-│      │      List.js
-│      │
-│      └─SortBar
-│              SortBar.css
-│              SortBar.js
+│  ├─Home\
+│  │  └─SearchBar\
+│  │          SearchBar.css\
+│  │          SearchBar.js\
+│  │\
+│  ├─Repo\
+│  │  └─Info\
+│  │          Info.css\
+│  │          Info.js\
+│  │\
+│  └─RepoList\
+│      ├─List\
+│      │      List.css\
+│      │      List.js\
+│      │\
+│      └─SortBar\
+│              SortBar.css\
+│              SortBar.js\
 │
-├─customhook
-│      useRepoInfoAPI.js
-│      useUserRepoAPI.js
+├─customhook\
+│      useRepoInfoAPI.js\
+│      useUserRepoAPI.js\
 │
-├─error
-│      handleAPIError.js
+├─error\
+│      handleAPIError.js\
 │
-└─page
-        Home.js
-        NotFound.js
-        page.css
-        Repo.js
-        RepoList.js
+└─page\
+        Home.js\
+        NotFound.js\
+        page.css\
+        Repo.js\
+        RepoList.js\
 `
 ## Website Introduction
 
