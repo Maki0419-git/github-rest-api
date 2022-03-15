@@ -1,4 +1,4 @@
-# 🌟🌟 Dcard 2022 Web Frontend Intern Homework 🌟🌟
+# ✨ Dcard 2022 Web Frontend Intern Homework ✨
 
 Chain the GitHub REST API and use React to implement a website that browses a single-user GitHub repository.
 
@@ -19,13 +19,13 @@ You may also see any lint errors in the console.
 
 * Enter username at Homepage's search bar to view his/her repositories.
 * you will be routed to  next page with the route  `/users/{username}/repos`.
-  >> there will be a API call to retrieve user's repositories.
-  >> each request will return a list of repositories `limit to 10`.
-  >> scrolling to the bottom of the page , trigger the event to load next 10 repositories until no more repositories.
-  >>>`you can even sort the result with  sort bar on the top of page.🙌🙌`
+  * there will be a API call to retrieve user's repositories.
+  * each request will return a list of repositories `limit to 10`.
+  * scrolling to the bottom of the page , trigger the event to load next 10 repositories until no more repositories.
+  * `you can even sort the result with  sort bar on the top of page.🙌🙌`
 * choose the repository you want to view.
 * you will be routed to  next page with the route  `/users/{username}/repos/{repo}`.
-  >> there will be a API call to retrieve the repository's information.
+  * there will be a API call to retrieve the repository's information.
 
 
 ### Deployment
