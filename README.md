@@ -15,70 +15,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-## Project structure
-`
-│  App.js\
-│  index.js\
-│  logo.svg\
-│  reportWebVitals.js\
-│  setupTests.js\
-│\
-├─assets\
-│  └─img\
-│          hero.png\
-│          no-data.png\
-│          not-found.png\
-│
-├─component\
-│  ├─Common\
-│  │  ├─Alert\
-│  │  │      Alert.css\
-│  │  │      Alert.js\
-│  │  │\
-│  │  ├─Bar\
-│  │  │      Bar.css\
-│  │  │      Bar.js\
-│  │  │
-│  │  ├─Error\
-│  │  │      Error.js\
-│  │  │
-│  │  └─Header\
-│  │          Header.css\
-│  │          Header.js\
-│  │
-│  ├─Home\
-│  │  └─SearchBar\
-│  │          SearchBar.css\
-│  │          SearchBar.js\
-│  │\
-│  ├─Repo\
-│  │  └─Info\
-│  │          Info.css\
-│  │          Info.js\
-│  │\
-│  └─RepoList\
-│      ├─List\
-│      │      List.css\
-│      │      List.js\
-│      │\
-│      └─SortBar\
-│              SortBar.css\
-│              SortBar.js\
-│
-├─customhook\
-│      useRepoInfoAPI.js\
-│      useUserRepoAPI.js\
-│
-├─error\
-│      handleAPIError.js\
-│
-└─page\
-        Home.js\
-        NotFound.js\
-        page.css\
-        Repo.js\
-        RepoList.js\
-`
+
 ## Website Introduction
 
 * Enter username at Homepage's search bar to view his/her repositories.
@@ -93,45 +30,40 @@ You may also see any lint errors in the console.
 
 ## Folder Structure
 
-###`src`
+### `src`
 
-* [assets/](.\src\assets)
-  * [img/](.\src\assets\img)
-    * [hero.png](.\src\assets\img\hero.png)
-    * [no-data.png](.\src\assets\img\no-data.png)
-    * [not-found.png](.\src\assets\img\not-found.png)
-* [component/](.\src\component)
-  * [Common/](.\src\component\Common)
-    * [Alert/](.\src\component\Common\Alert)
-    * [Bar/](.\src\component\Common\Bar)
-    * [Error/](.\src\component\Common\Error)
-    * [Header/](.\src\component\Common\Header)
-  * [Home/](.\src\component\Home)
-    * [SearchBar/](.\src\component\Home\SearchBar)
-  * [Repo/](.\src\component\Repo)
-    * [Info/](.\src\component\Repo\Info)
-  * [RepoList/](.\src\component\RepoList)
-    * [List/](.\src\component\RepoList\List)
-    * [SortBar/](.\src\component\RepoList\SortBar)
-* [customhook/](.\src\customhook)
-  * [useRepoInfoAPI.js](.\src\customhook\useRepoInfoAPI.js)
-  * [useUserRepoAPI.js](.\src\customhook\useUserRepoAPI.js)
-* [error/](.\src\error)
-  * [handleAPIError.js](.\src\error\handleAPIError.js)
-* [page/](.\src\page)
-  * [Home.js](.\src\page\Home.js)
-  * [NotFound.js](.\src\page\NotFound.js)
-  * [page.css](.\src\page\page.css)
-  * [Repo.js](.\src\page\Repo.js)
-  * [RepoList.js](.\src\page\RepoList.js)
-* [App.js](.\src\App.js)
-* [index.js](.\src\index.js)
-* [logo.svg](.\src\logo.svg)
-* [reportWebVitals.js](.\src\reportWebVitals.js)
-* [setupTests.js](.\src\setupTests.js)
+* [assets/]
+  * [img]
+* [component/]
+  * [Common/]
+    * [Alert]
+    * [Bar]
+    * [Error]
+    * [Header]
+  * [Home/]
+    * [SearchBar]
+  * [Repo/]
+    * [Info]
+  * [RepoList/]
+    * [List]
+    * [SortBar]
+* [customhook/]
+  * [useRepoInfoAPI.js]
+  * [useUserRepoAPI.js]
+* [error/]
+  * [handleAPIError.js]
+* [page/]
+  * [Home.js]
+  * [NotFound.js]
+  * [page.css]
+  * [Repo.js]
+  * [RepoList.js]
+* [App.js]
+* [index.js]
+
 
 
 ### Deployment
 
-Web Page was deployed to github-pages : https://Maki0419-git.github.io/github-rest-api/ 
+Web Page was deployed to github-pages 😊😊 : https://Maki0419-git.github.io/github-rest-api/ 
 
