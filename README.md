@@ -34,7 +34,7 @@ Open [Figma](https://www.figma.com/file/A7tIAqKmsWtwpVRd9rhmai/github-rest-api?n
 
 ### 📜 Website Architecture
 
-#### view on [google-cloud](https://drive.google.com/file/d/11XsijPAVXR6dQmxnP3QDMX_NK3XWbxCc/view?usp=sharing)
+#### view on [google-cloud](https://drive.google.com/file/d/1as9StHbhXj-WFKjQ-DNptS3ApQ0heGnp/view?usp=sharing)
 ![image](https://github.com/Maki0419-git/github-rest-api/blob/master/src/assets/img/2022%20Web%20Frontend%20Intern%20Homework.png)
 
 
