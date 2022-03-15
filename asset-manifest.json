@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/github-rest-api/static/css/main.f73f2fbd.css",
-    "main.js": "/github-rest-api/static/js/main.21c0c78a.js",
+    "main.css": "/github-rest-api/static/css/main.192fdbba.css",
+    "main.js": "/github-rest-api/static/js/main.bb7fb99d.js",
     "static/js/787.f4a5ba00.chunk.js": "/github-rest-api/static/js/787.f4a5ba00.chunk.js",
     "static/media/hero.png": "/github-rest-api/static/media/hero.f56e096d5a39e80198f0.png",
     "static/media/no-data.png": "/github-rest-api/static/media/no-data.43e3d8c1083db9f160c0.png",
     "static/media/not-found.png": "/github-rest-api/static/media/not-found.f2d03285765c941251f2.png",
     "index.html": "/github-rest-api/index.html",
-    "main.f73f2fbd.css.map": "/github-rest-api/static/css/main.f73f2fbd.css.map",
-    "main.21c0c78a.js.map": "/github-rest-api/static/js/main.21c0c78a.js.map",
+    "main.192fdbba.css.map": "/github-rest-api/static/css/main.192fdbba.css.map",
+    "main.bb7fb99d.js.map": "/github-rest-api/static/js/main.bb7fb99d.js.map",
     "787.f4a5ba00.chunk.js.map": "/github-rest-api/static/js/787.f4a5ba00.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f73f2fbd.css",
-    "static/js/main.21c0c78a.js"
+    "static/css/main.192fdbba.css",
+    "static/js/main.bb7fb99d.js"
   ]
 }
