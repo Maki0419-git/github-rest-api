@@ -129,7 +129,7 @@
 .img-alert {
     display:block;
     margin:auto;
-    width:50%;
+    width:45%;
   }
 
 /* RWD */
@@ -137,10 +137,6 @@
     .card{
         padding:4% 5%;
     }
-    .search-bar input[type=text]{
-        width: 85%;
-    }
-
     .card div h2{
         font-size:20px;
     }
