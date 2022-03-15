@@ -1,18 +1,12 @@
----
-description: >-
-  Chain the GitHub REST API and use React to implement a website that browses a
-  single-user GitHub repository.
-cover: .gitbook/assets/748076.png
-coverY: 0
----
+# Dcard 2022 Web Frontend Intern Homework ✨
 
-# Dcard 2022 Web Frontend Intern Homework
+Chain the GitHub REST API and use React to implement a website that browses a single-user GitHub repository.
 
-### 📜 Available Scripts
+## Available Scripts
 
 In the project directory, you can run:
 
-#### `npm start`
+### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -20,11 +14,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### 📜 Website Design
-
-{% embed url="https://www.figma.com/file/A7tIAqKmsWtwpVRd9rhmai/github-rest-api?node-id=0%3A1" %}
-
-### 📜 Website Introduction
+## Website Introduction
 
 * Enter username at Homepage's search bar to view his/her repositories.
 * you will be routed to next page with the route `/users/{username}/repos`.
@@ -33,21 +23,12 @@ You may also see any lint errors in the console.
   * scrolling to the bottom of the page , trigger the event to load next 10 repositories until no more repositories.
   * `you can even sort the result with sort bar on the top of page.🙌🙌`
 * choose the repository you want to view.
-*   you will be routed to next page with the route `/users/{username}/repos/{repo}`.
+* you will be routed to next page with the route `/users/{username}/repos/{repo}`.
+  * there will be a API call to retrieve the repository's information.
 
-    * there will be a API call to retrieve the repository's information.
+## Folder Structure
 
-
-
-### 📜 Website Architecture
-
-
-
-{% file src=".gitbook/assets/2022 Web Frontend Intern Homework (1).png" %}
-
-### 📜 Folder Structure
-
-#### `src`
+### `src`
 
 ```
 .
@@ -112,8 +93,6 @@ You may also see any lint errors in the console.
         RepoList.js
 ```
 
-### 🔥 Deployment
+### Deployment
 
-Web Page was deployed to github-pages 😊😊 :&#x20;
-
-{% embed url="https://maki0419-git.github.io/github-rest-api" %}
+Web Page was deployed to github-pages 😊😊 : https://Maki0419-git.github.io/github-rest-api/
