@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/github-rest-api/static/css/main.249160cf.css",
-    "main.js": "/github-rest-api/static/js/main.830df91f.js",
+    "main.css": "/github-rest-api/static/css/main.abfaf45e.css",
+    "main.js": "/github-rest-api/static/js/main.0b77e63d.js",
     "static/media/hero.png": "/github-rest-api/static/media/hero.f56e096d5a39e80198f0.png",
     "static/media/no-data.png": "/github-rest-api/static/media/no-data.43e3d8c1083db9f160c0.png",
     "static/media/not-found.png": "/github-rest-api/static/media/not-found.f2d03285765c941251f2.png",
     "index.html": "/github-rest-api/index.html",
-    "main.249160cf.css.map": "/github-rest-api/static/css/main.249160cf.css.map",
-    "main.830df91f.js.map": "/github-rest-api/static/js/main.830df91f.js.map"
+    "main.abfaf45e.css.map": "/github-rest-api/static/css/main.abfaf45e.css.map",
+    "main.0b77e63d.js.map": "/github-rest-api/static/js/main.0b77e63d.js.map"
   },
   "entrypoints": [
-    "static/css/main.249160cf.css",
-    "static/js/main.830df91f.js"
+    "static/css/main.abfaf45e.css",
+    "static/js/main.0b77e63d.js"
   ]
 }
