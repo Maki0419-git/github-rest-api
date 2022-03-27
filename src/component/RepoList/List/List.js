@@ -54,7 +54,7 @@ export default function List({ query, setQuery, username }) {
                     return (
                         <div className="card"
                             key={index} ref={index + 1 === repositories.length ? refCallback : null}
-                            onClick={() => navigate(`/repos/${username}/${repo.name}?owner=${repo.owner}`)}
+                            onClick={() => navigate(`/users/${username}/repos/${repo.name}?owner=${repo.owner}`)}
                         >
                             <div className="first">
                                 {/* star icon */}
