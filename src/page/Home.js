@@ -18,7 +18,7 @@ const Home = () => {
                         <h1>GitHub REST API</h1>
                         <p>
                             search your own repo <br />
-                            by entering your uername !
+                            by entering your username !
                         </p>
                         <SearchBar />
                     </div>

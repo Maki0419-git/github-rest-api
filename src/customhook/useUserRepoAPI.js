@@ -22,14 +22,20 @@ export default function useUserRepoAPI({ query, username }) {
     const [repositories, setRepositories] = useState([]);
     const render = useRef(0);
     // setting minimum loading time
-    const timer = (repositories, data) => setTimeout(() => {
-        setStatus(prev => ({ ...prev, loading: false, hasMore: data.length === 10, }))
-        setRepositories(prev => [...prev, ...repositories]);
-    }, 1000)
+    let timer;
+    const loadingTime = (repositories, data) => {
+
+        timer = setTimeout(() => {
+            setStatus(prev => ({ ...prev, loading: false, hasMore: data.length === 10, }))
+            setRepositories(prev => [...prev, ...repositories]);
+        }, 1000)
+    }
     //get API data
-    const getRepo = useCallback(async () => {
+    const getRepo = useCallback(async (isMounted) => {
         // console.log("callback")
-        setStatus(prev => ({ ...prev, loading: true, error: false, errorMessage: "" }))
+        if (isMounted) {
+            setStatus(prev => ({ ...prev, loading: true, error: false, errorMessage: "" }))
+        }
         try {
             const options = {
                 method: 'GET',
@@ -46,23 +52,31 @@ export default function useUserRepoAPI({ query, username }) {
                     owner: repo.owner.login,
                 }
             ))
-            timer(repositories, data);
+            if (isMounted) {
+                loadingTime(repositories, data);
+            }
+
         } catch (error) {
 
             handleAPIError(error, setStatus);
 
         }
+
     }, [query,])
 
 
     // useEffect(() => { render.current += 1; console.log("custom hook render :" + render.current) })
 
     useEffect(() => {
+        let isMounted = true;
         console.log("read data")
         console.log("page: " + query.page);
         if (query.page === 1) setRepositories([]);
-        getRepo();
-        return () => clearTimeout(timer)
+        getRepo(isMounted);
+        return () => {
+            isMounted = false;
+            clearTimeout(timer)
+        }
     }, [query,])
 
 

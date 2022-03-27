@@ -14,12 +14,16 @@ const useRepoInfoAPI = ({ query }) => {
     })
     const [info, setInfo] = useState({});
     // setting minimum loading time
-    const timer = (value) => setTimeout(() => {
-        setStatus(prev => ({ ...prev, loading: false }))
-        setInfo(value);
-    }, 1000)
-    const readInfo = useCallback(async () => {
-        setStatus(prev => ({ ...prev, loading: true, error: false, errorMessage: "" }))
+    let timer;
+    const loadingTime = (value) => {
+        timer = setTimeout(() => {
+            setStatus(prev => ({ ...prev, loading: false }))
+            setInfo(value);
+        }, 1000)
+    }
+
+    const readInfo = useCallback(async (isMounted) => {
+        if (isMounted) setStatus(prev => ({ ...prev, loading: true, error: false, errorMessage: "" }))
         try {
             const options = {
                 method: 'GET',
@@ -29,7 +33,7 @@ const useRepoInfoAPI = ({ query }) => {
             const { data } = await axios.request(options);
             const { full_name, html_url, description, clone_url, watchers_count,
                 stargazers_count, default_branch, pushed_at, language, size } = data;
-            timer({
+            if (isMounted) loadingTime({
                 full_name, html_url, description, clone_url, watchers_count,
                 stargazers_count, default_branch, pushed_at: moment(pushed_at).startOf("seconds").fromNow(), language, size
             });
@@ -39,7 +43,12 @@ const useRepoInfoAPI = ({ query }) => {
     }, [query]);
 
     useEffect(() => {
-        readInfo();
+        let isMounted = true;
+        readInfo(isMounted);
+        return () => {
+            isMounted = false;
+            clearTimeout(timer)
+        };
     }, [query])
 
     return { ...status, info }
