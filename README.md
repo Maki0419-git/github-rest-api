@@ -107,7 +107,7 @@ Open [Figma](https://www.figma.com/file/A7tIAqKmsWtwpVRd9rhmai/github-rest-api?n
 
 ### 🔥 Deployment
 
-#### Website was deployed to github-pages and aws 😊😊 :
+#### Website was deployed to github-pages and aws 😊😊😊 :
 
 ✔️ [github-pages](https://maki0419-git.github.io/github-rest-api)\
 ✔️ [aws](http://github-rest-api.s3-website-us-east-1.amazonaws.com/)
