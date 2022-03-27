@@ -23,7 +23,7 @@ const useRepoInfoAPI = ({ query }) => {
         try {
             const options = {
                 method: 'GET',
-                url: `https://api.github.com/repos/${query.username}/${query.repo}`,
+                url: `https://api.github.com/repos/${query.owner}/${query.repo}`,
                 headers: { Accept: 'application/vnd.github.v3+json' }
             };
             const { data } = await axios.request(options);

@@ -42,7 +42,8 @@ export default function useUserRepoAPI({ query, username }) {
                     name: repo.name,
                     stargazers_count: repo.stargazers_count,
                     language: repo.language,
-                    updated_at: repo.updated_at
+                    updated_at: repo.updated_at,
+                    owner: repo.owner.login,
                 }
             ))
             timer(repositories, data);
@@ -51,10 +52,10 @@ export default function useUserRepoAPI({ query, username }) {
             handleAPIError(error, setStatus);
 
         }
-    }, [query, username])
+    }, [query,])
 
 
-    useEffect(() => { render.current += 1; console.log("custom hook render :" + render.current) })
+    // useEffect(() => { render.current += 1; console.log("custom hook render :" + render.current) })
 
     useEffect(() => {
         console.log("read data")
@@ -62,7 +63,7 @@ export default function useUserRepoAPI({ query, username }) {
         if (query.page === 1) setRepositories([]);
         getRepo();
         return () => clearTimeout(timer)
-    }, [query, username])
+    }, [query,])
 
 
 

@@ -44,11 +44,9 @@ export default function List({ query, setQuery, username }) {
         //觀察 DOM
         observer.current.observe(node);
     }, [loading])
-    useEffect(() => { render.current += 1; console.log("list render :" + render.current) })
+
     return (
         <>
-            {console.log("render")}
-
             <div className="list-wrapper wrapper-card" >
 
                 {/* no  error then card */}
@@ -56,7 +54,7 @@ export default function List({ query, setQuery, username }) {
                     return (
                         <div className="card"
                             key={index} ref={index + 1 === repositories.length ? refCallback : null}
-                            onClick={() => navigate(`/repos/${username}/${repo.name}`)}
+                            onClick={() => navigate(`/repos/${username}/${repo.name}?owner=${repo.owner}`)}
                         >
                             <div className="first">
                                 {/* star icon */}
