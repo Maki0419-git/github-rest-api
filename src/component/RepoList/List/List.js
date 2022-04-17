@@ -40,7 +40,7 @@ export default function List({ query, setQuery, username }) {
                     setQuery(prev => ({ ...prev, page: prev.page + 1 }))
                 }
             });
-        }, { threshold: 1 });
+        }, { threshold: 0.8 });
         //觀察 DOM
         observer.current.observe(node);
     }, [loading])
