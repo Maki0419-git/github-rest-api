@@ -11,7 +11,7 @@ import './page.css'
 const Home = () => {
     return (
         <>
-            <Bar title="Dcard 2022 Web Frontend Intern Homework" />
+            <Bar title="Melody's Project" />
             <div className="container">
                 <div className="home-wrapper">
                     <div className="title-container">
