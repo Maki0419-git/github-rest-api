@@ -1,7 +1,5 @@
 
 
-# ✨ Dcard 2022 Web Frontend Intern Homework ✨
-
 ### 📜 Available Scripts
 
 In the project directory, you can run:
